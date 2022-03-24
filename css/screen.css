@@ -120,7 +120,9 @@ footer > a {
 footer > a:hover {
     color: #fff;
 }
-
+.copyright a:hover{
+    color : #ffca2c;
+}
 
 /*list*/
 .container.list{
