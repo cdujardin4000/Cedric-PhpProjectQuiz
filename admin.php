@@ -20,9 +20,6 @@ if(!empty($_FILES['logo'])){
         }
     }
 }
-
-
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -31,13 +28,9 @@ if(!empty($_FILES['logo'])){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project1PHP: Quiz</title>
-
     <script type="text/javascript" src="js/jquery.js"></script>
-
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="css/screen.css" type="text/css">
-    
-
 </head>
 <body>
     <section class="sliderTarget container">
@@ -81,7 +74,7 @@ if(!empty($_FILES['logo'])){
         </form>
     </section>
     <footer class="bg-dark">
-        <div class="copyright">&copy; EPFC &dot; 2022</div>
+        <p class="copyright">&copy; EPFC &dot; 2022, Made with <strong>❤</strong> by <a class="mail" href="mailto:cdujardin4000@gmail.com">cdujardin4000</a></p>
         <a href="https://quiditvrai.com/conditions-dutilisation/">Condition d'utilisation</a>
     </footer>
     <script type="text/javascript" src="js/main.js"></script>

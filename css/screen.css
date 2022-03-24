@@ -120,10 +120,7 @@ footer > a {
 footer > a:hover {
     color: #fff;
 }
-.copyright {
-    margin-left: 47vw;
-    color : #ffca2c;
-}
+
 
 /*list*/
 .container.list{
@@ -144,6 +141,3 @@ td > p {
     border: 1px solid black;
 }
 
-{
-    font-size: 2rem;
-}

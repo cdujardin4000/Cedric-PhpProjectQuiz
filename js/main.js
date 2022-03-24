@@ -6,6 +6,8 @@ $(function(){
     FOOTER.css({'padding-top': '2rem', 'padding-bottom': '2rem', 'margin-top': '2rem'});
     NORESULTS.css({'font-size': '2rem', 'margin': '2rem 0'});
     INPUT.css({'margin-bottom': '1rem'});
+    $('.copyright').css({'text-align': 'center', 'color': '#ffca2c'});
+    $('.mail:hover').css({'color': '#ffca2c'});
     $('.change-logo').css({'margin-top': '1rem'});
     $('label.statusMessage').css({'margin': '2rem 0','font-size': '2rem'});
     const TARGETSLIDER = $('.sliderTarget');

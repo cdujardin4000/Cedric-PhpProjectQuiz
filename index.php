@@ -2,13 +2,11 @@
 
 include 'filterQuizs.php';
 include 'quizs.php';
-$status = 'normal';
+
 if (isset($_POST['query']) && !empty($_POST['query'])){
     $quizs = filterQuizs($_POST['query']);
     $status = 'filtered';
 }
-
-
 
 ?>
 <!DOCTYPE html>
@@ -18,9 +16,7 @@ if (isset($_POST['query']) && !empty($_POST['query'])){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project1PHP: Quiz</title>
-
     <script type="text/javascript" src="js/jquery.js"></script>
-
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="css/screen.css" type="text/css">
     
@@ -79,29 +75,11 @@ if (isset($_POST['query']) && !empty($_POST['query'])){
             <tbody id="content">
                 <?php
                 if(count($quizs) == 0){
+
                     echo "<p class='no-result'>Pas de Quizs trouvés</p>";
-                }
-                if($status == 'normal'){
-                    $i = 0;
-                    foreach($quizs as $quiz) {
-                        echo "<tr>";
-                        echo "<td>";
-                        echo "<p class='list-text'><a href='view.php?id=$i' >$quiz[Title]</a></p>";
-                        echo "</td>";
-                        echo "<td>";
-                        echo "<img src='img/$i.jpg' class='quiz list-img'>";
-                        echo "</td>";
-                        echo "<td>";
-                        echo "<p class='list-text'><a>$quiz[Author]</a></p>";
-                        echo "</td>";
-                        echo "<td>";
-                        echo "<p class='list-text'>" . count($quiz['Questions']) . "</p>";
-                        echo "</td>";
-                        echo "</tr>";
-                        $i += 1;
-                    }
-                }
-                elseif($status == 'filtered' && count($quizs) != 0){
+
+                } elseif(count($quizs) != 0){
+
                     $keys = array_keys($quizs);
                     foreach($keys as $key) {
                         echo "<tr>";
@@ -129,7 +107,7 @@ if (isset($_POST['query']) && !empty($_POST['query'])){
 
     </section>
     <footer class="bg-dark">
-        <div class="copyright">&copy; EPFC &dot; 2022</div>
+        <p class="copyright">&copy; EPFC &dot; 2022, Made with <strong>❤</strong> by <a class="mail" href="mailto:cdujardin4000@gmail.com">cdujardin4000</a></p>
         <a href="https://quiditvrai.com/conditions-dutilisation/">Condition d'utilisation</a>
     </footer>
     <script type="text/javascript" src="js/main.js"></script>
