@@ -1,0 +1,149 @@
+h1 {
+
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*basis css slider*/
+
+.slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 500%;
+    height: 25rem;
+    animation: animate 10s linear infinite;
+  }
+
+.slider .slide {
+    position: relative;
+    width: 20%;
+    height: 100%;
+    float: left;
+}
+
+.slider .slide .caption {
+    position: absolute;
+    background: rgba(0, 0, 0, .5);
+    box-sizing: border-box;
+    transition: 0.5s;
+    height: 100%;
+}
+
+.slider .slide .caption h2 {
+    margin-bottom: 20px;
+    padding: 0;
+    color: #fff;
+    font-size: 48px;
+    transition: 0.5s;
+}
+
+.slider .slide .caption p {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-size: 20px;
+    transition: 0.5s;
+    }
+
+@media (max-width: 768px) {
+    .slider .slide .caption {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        right: 20px;
+        padding: 20px;
+    }
+    .slider .slide .caption h2 {
+        margin-bottom: 10px;
+        font-size: 30px;
+    }
+    .slider .slide .caption p {
+        font-size: 16px;
+    }
+}
+
+/*slider animation*/
+
+@keyframes animate {
+    0% {
+        left: 0;
+    }
+    20% {
+        left: 0;
+    }
+    25% {
+        left: -100%;
+    }
+    45% {
+        left: -100%;
+    }
+    50% {
+        left: -200%;
+    }
+    70% {
+        left: -200%;
+    }
+    75% {
+        left: -300%;
+    }
+    85% {
+        left: -300%;
+    }
+    100% {
+        left: -400%;
+    }
+}
+
+/*header*/
+.logo-header{
+    height: 5rem;
+    width: 5rem;
+}
+.header{
+    margin: 25rem 0 1rem 0;
+
+}
+
+
+/*footer*/
+
+footer > a {
+    margin-left: 45vw;
+    color : #ffca2c;
+    text-decoration: none;
+
+}
+footer > a:hover {
+    color: #fff;
+}
+.copyright {
+    margin-left: 47vw;
+    color : #ffca2c;
+}
+
+/*list*/
+.container.list{
+    text-align: center;
+}
+.quiz.list-img {
+    height: 10rem;
+    width: 10rem;
+
+}
+
+td > p {
+    margin-top: 5rem;
+}
+
+.btn.change-logo:hover {
+    color: black;
+    border: 1px solid black;
+}
+
+{
+    font-size: 2rem;
+}
