@@ -111,3 +111,10 @@ if (isset($_POST['query']) && !empty($_POST['query'])){
     <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
+
+		$query = [];
+		foreach($_POST as $key => $value){
+		    if (!empty($key)){
+		        $query[] = [$key => $value];
+            }
+        }
