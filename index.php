@@ -47,8 +47,8 @@ if (isset($_POST['query']) && !empty($_POST['query'])){
                     </form>
 
                     <div class="text-end">
-                        <button type="button" class="btn btn-outline-light me-2">Login</button>
-                        <button type="button" class="btn btn-warning">Sign-up</button>
+                        <a href="#" class="btn btn-outline-light me-2">Login</a>
+                        <a href="#" class="btn btn-warning">Sign-up</a>
                     </div>
                 </div>
             </div>
