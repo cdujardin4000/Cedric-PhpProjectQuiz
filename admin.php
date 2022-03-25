@@ -33,10 +33,6 @@ if(!empty($_FILES['logo'])){
     <link rel="stylesheet" href="css/screen.css" type="text/css">
 </head>
 <body>
-    <section class="sliderTarget container">
-
-    </section>
-
     <section class="header ">
         <header class="p-3 bg-dark text-white">
             <div class="container">
@@ -77,7 +73,7 @@ if(!empty($_FILES['logo'])){
         <p class="copyright">&copy; EPFC &dot; 2022, Made with <strong>❤</strong> by <a class="mail" href="mailto:cdujardin4000@gmail.com">cdujardin4000</a></p>
         <a href="https://quiditvrai.com/conditions-dutilisation/">Condition d'utilisation</a>
     </footer>
-    <script type="text/javascript" src="js/main.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
 

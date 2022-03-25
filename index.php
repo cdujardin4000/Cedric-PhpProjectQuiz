@@ -110,7 +110,7 @@ if (isset($_POST['query']) && !empty($_POST['query'])){
         <p class="copyright">&copy; EPFC &dot; 2022, Made with <strong>❤</strong> by <a class="mail" href="mailto:cdujardin4000@gmail.com">cdujardin4000</a></p>
         <a href="https://quiditvrai.com/conditions-dutilisation/">Condition d'utilisation</a>
     </footer>
-    <script type="text/javascript" src="js/main.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
 
