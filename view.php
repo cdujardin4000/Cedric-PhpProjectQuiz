@@ -62,7 +62,7 @@ $quiz = $quizs[$_GET['id']];
                 foreach($quiz['Questions'] as $question) { ?>
                 <tr>
                     <td>
-                        <p><?= $question ?></p>
+                        <p class="question"><?= $question ?></p>
                     </td>
                 </tr>
                 <?php

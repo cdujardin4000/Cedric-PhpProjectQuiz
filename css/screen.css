@@ -48,7 +48,9 @@ footer > a:hover {
 td > p {
     margin-top: 5rem;
 }
-
+.question{
+    margin: 1rem 0;
+}
 .btn.change-logo:hover {
     color: black;
     border: 1px solid black;
