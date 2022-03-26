@@ -4,7 +4,7 @@ include 'filterQuizs.php';
 include 'quizs.php';
 
 if (isset($_GET['query']) && !empty($_GET['query'])){
-    $quizs = filterQuizs($_POST['query']);
+    $quizs = filterQuizs($_GET['query']);
     $status = 'filtered';
 }
 

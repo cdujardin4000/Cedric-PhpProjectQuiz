@@ -73,7 +73,7 @@ $quiz = $quizs[$_GET['id']];
         </table>
     </section>
     <footer class="bg-dark">
-        <div class="copyright">&copy; EPFC &dot; 2022</div>
+        <p class="copyright">&copy; EPFC &dot; 2022, Made with <strong>❤</strong> by <a class="mail" href="mailto:cdujardin4000@gmail.com">cdujardin4000</a></p>
         <a href="https://quiditvrai.com/conditions-dutilisation/">Condition d'utilisation</a>
     </footer>
     <script type="text/javascript" src="js/main.js"></script>
