@@ -33,34 +33,31 @@ if(!empty($_FILES['logo'])){
     <link rel="stylesheet" href="css/screen.css" type="text/css">
 </head>
 <body>
-    <section class="header ">
-        <header class="p-3 bg-dark text-white">
-            <div class="container">
-                <h1 class="justify-content-center">Projet PHP n°1: QUIZ</h1>
-                <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-                    <a href="index.php" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-                        <img src ="img/quiz-logo.png" alt="logo du header" title="LOGO" class="logo-header">
-                    </a>
+    <header class="p-3 bg-dark text-white">
+        <div class="container">
+            <h1 class="justify-content-center">Projet PHP n°1: QUIZ</h1>
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <a href="index.php" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                    <img src ="img/quiz-logo.png" alt="logo du header" title="LOGO" class="logo-header">
+                </a>
 
-                    <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                        <li><a href="index.php" class="nav-link px-2 text-secondary">Home</a></li>
-                        <li><a href="admin.php" class="nav-link px-2 text-white">Admin</a></li>
-                    </ul>
+                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                    <li><a href="index.php" class="nav-link px-2 text-secondary">Home</a></li>
+                    <li><a href="admin.php" class="nav-link px-2 text-white">Admin</a></li>
+                </ul>
 
-                    <form class="search-quiz col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" action="index.php" method="post">
-                        <input type="text" class="form-control form-control-dark" id="input" placeholder="Rechercher un quiz" aria-label="Search" name="query">
-                        <input type="submit" class="btn btn-outline-light me-2" value="Rechercher">
-                    </form>
+                <form class="search-quiz col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" action="index.php" method="post">
+                    <input type="text" class="form-control form-control-dark" id="input" placeholder="Rechercher un quiz" aria-label="Search" name="query">
+                    <input type="submit" class="btn btn-outline-light me-2" value="Rechercher">
+                </form>
 
-                    <div class="text-end">
-                        <button type="button" class="btn btn-outline-light me-2">Login</button>
-                        <button type="button" class="btn btn-warning">Sign-up</button>
-                    </div>
+                <div class="text-end">
+                    <button type="button" class="btn btn-outline-light me-2">Login</button>
+                    <button type="button" class="btn btn-warning">Sign-up</button>
                 </div>
             </div>
-        </header>
-    </section>
-
+        </div>
+    </header>
     <section class="container form mb-3">
         <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" action="admin.php" method="post" enctype="multipart/form-data">
             <input type="hidden" name="MAX_FILE_SIZE" value="300000"/>

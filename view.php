@@ -22,11 +22,6 @@ $quiz = $quizs[$_GET['id']];
 
 </head>
 <body>
-<section class="sliderTarget container">
-
-</section>
-
-<section class="header ">
     <header class="p-3 bg-dark text-white">
         <div class="container">
             <h1 class="justify-content-center">Projet PHP n°1: QUIZ</h1>
@@ -52,33 +47,35 @@ $quiz = $quizs[$_GET['id']];
             </div>
         </div>
     </header>
-</section>
-
-<section class="container list">
-    <table class="table table-striped table-bordered">
-        <thead>
-            <?php
-                echo "<tr><td><h2>$quiz[Title]</h2></td><td/tr>";
-            ?>
-        </thead>
-        <tbody id="content">
-            <?php
-            $i = 0;
-            foreach($quiz['Questions'] as $question) {
-                echo "<tr><td>$question</h2></tr>";
-                $i +=1;
-            }
-            ?>
-        </tbody>
-    </table>
-</section>
-<section class="container view">
-
-</section>
-<footer class="bg-dark">
-    <div class="copyright">&copy; EPFC &dot; 2022</div>
-    <a href="https://quiditvrai.com/conditions-dutilisation/">Condition d'utilisation</a>
-</footer>
-<script type="text/javascript" src="js/main.js"></script>
+    <section class="container list">
+        <table class="table table-striped table-bordered">
+            <thead>
+                <tr>
+                    <td>
+                        <h2><?= $quiz['Title'] ?></h2>
+                    </td>
+                </tr>
+            </thead>
+            <tbody id="content">
+                <?php
+                $i = 0;
+                foreach($quiz['Questions'] as $question) { ?>
+                <tr>
+                    <td>
+                        <p><?= $question ?></p>
+                    </td>
+                </tr>
+                <?php
+                    $i +=1;
+                }
+                ?>
+            </tbody>
+        </table>
+    </section>
+    <footer class="bg-dark">
+        <div class="copyright">&copy; EPFC &dot; 2022</div>
+        <a href="https://quiditvrai.com/conditions-dutilisation/">Condition d'utilisation</a>
+    </footer>
+    <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>

@@ -23,11 +23,7 @@ if (isset($_POST['query']) && !empty($_POST['query'])){
 
 </head>
 <body>
-    <section class="sliderTarget container">
 
-    </section>
-
-    <section class="header ">
         <header class="p-3 bg-dark text-white">
             <div class="container">
                 <h1 class="justify-content-center">Projet PHP n°1: QUIZ</h1>
@@ -53,50 +49,47 @@ if (isset($_POST['query']) && !empty($_POST['query'])){
                 </div>
             </div>
         </header>
-    </section>
+
 
     <section class="container list">
         <table class="table table-striped table-bordered">
             <thead>
-            <tr>
-                <?php
-                //var_dump($quizs);
-                if(count($quizs) != 0) {
-                    $j = array_key_first($quizs);
-                    //var_dump($j);
-                    foreach($quizs[$j] as $key => $value){
-                        echo "<td><h2>$key</h2></td>";
-                    }
-                }
+                <tr>
+                    <?php if(count($quizs) != 0) {
+                        $j = array_key_first($quizs);
 
-                ?>
-            </tr>
+                        foreach($quizs[$j] as $key => $value){ ?>
+                            <td>
+                                <h2><?= $key ?></h2>
+                            </td>
+                        <?php }
+                    } ?>
+                </tr>
             </thead>
             <tbody id="content">
-                <?php
-                if(count($quizs) == 0){
+                <?php if(count($quizs) == 0){ ?>
 
-                    echo "<p class='no-result'>Pas de Quizs trouvés</p>";
+                    <p class='no-result'>Pas de Quizs trouvés</p>
 
-                } elseif(count($quizs) != 0){
+                <?php } elseif(count($quizs) != 0){
 
                     $keys = array_keys($quizs);
-                    foreach($keys as $key) {
-                        echo "<tr>";
-                        echo "<td>";
-                        echo "<p class='list-text'><a href='view.php?id=" . $key . "'> " . $quizs[$key]['Title'] . "</a></p>";
-                        echo "</td>";
-                        echo "<td>";
-                        echo "<img src='img/$key.jpg' class='quiz list-img'>";
-                        echo "</td>";
-                        echo "<td>";
-                        echo "<p class='list-text'><a>" . $quizs[$key]['Author'] . "</a></p>";
-                        echo "</td>";
-                        echo "<td>";
-                        echo "<p class='list-text'>" . count($quizs[$key]['Questions']) . "</p>";
-                        echo "</td>";
-                        echo "</tr>";
-
+                    foreach($keys as $key) { ?>
+                        <tr>
+                            <td>
+                                <p class='list-text'><a href='view.php?id=<?= $key ?>'><?= $quizs[$key]['Title'] ?></a></p>
+                            </td>
+                            <td>
+                                <img src='img/<?= $key ?>.jpg' class='quiz list-img'>
+                            </td>
+                            <td>
+                                <p class='list-text'><a><?= $quizs[$key]['Author'] ?></a></p>
+                            </td>
+                            <td>
+                                <p class='list-text'> <?= count($quizs[$key]['Questions']) ?></p>
+                            </td>
+                        </tr>
+                    <?php
                     }
                 }
                 ?>
