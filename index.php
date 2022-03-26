@@ -3,7 +3,7 @@
 include 'filterQuizs.php';
 include 'quizs.php';
 
-if (isset($_POST['query']) && !empty($_POST['query'])){
+if (isset($_GET['query']) && !empty($_GET['query'])){
     $quizs = filterQuizs($_POST['query']);
     $status = 'filtered';
 }
@@ -37,7 +37,7 @@ if (isset($_POST['query']) && !empty($_POST['query'])){
                         <li><a href="admin.php" class="nav-link px-2 text-white">Admin</a></li>
                     </ul>
 
-                    <form class="search-quiz col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" action="index.php" method="post">
+                    <form class="search-quiz col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" action="index.php" method="get">
                         <input type="text" class="form-control form-control-dark" id="input" placeholder="Rechercher un quiz" aria-label="Search" name="query">
                         <input type="submit" class="btn btn-outline-light me-2" value="Rechercher">
                     </form>
