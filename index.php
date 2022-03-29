@@ -56,8 +56,8 @@ if (isset($_GET['query']) && !empty($_GET['query'])){
             <thead>
                 <tr>
                     <?php if(count($quizs) != 0) {
-                        $j = array_key_first($quizs);
 
+                        $j = array_key_first($quizs);
                         foreach($quizs[$j] as $key => $value){ ?>
                             <td>
                                 <h2><?= $key ?></h2>
@@ -67,11 +67,11 @@ if (isset($_GET['query']) && !empty($_GET['query'])){
                 </tr>
             </thead>
             <tbody id="content">
-                <?php if(count($quizs) == 0){ ?>
+                <?php if(count($quizs) == 0) { ?>
 
                     <p class='no-result'>Pas de Quizs trouvés</p>
 
-                <?php } elseif(count($quizs) != 0){
+                <?php } elseif(count($quizs) != 0) {
 
                     $keys = array_keys($quizs);
                     foreach($keys as $key) { ?>
